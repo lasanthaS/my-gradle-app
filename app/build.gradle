@@ -58,7 +58,6 @@ release {
 
 tasks.named('build').configure {
     finalizedBy('publishToMavenLocal')
-    // finalizedBy('publish')
 }
 
 tasks.named('publish').configure {
