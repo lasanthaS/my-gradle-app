@@ -58,6 +58,7 @@ release {
 
 tasks.named('build').configure {
     finalizedBy('publishToMavenLocal')
+    // finalizedBy('publish')
 }
 
 tasks.named('publish').configure {
@@ -67,3 +68,5 @@ tasks.named('publish').configure {
 tasks.named('publishToMavenLocal').configure {
     dependsOn('build')
 }
+
+afterReleaseBuild.dependsOn('publish')
