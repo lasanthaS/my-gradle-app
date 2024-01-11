@@ -38,6 +38,13 @@ publishing {
             from components.java
         }
     }
+
+    repositories {
+        maven {
+            name = "localM2"
+            url = uri("/Users/lasanthas/WSO2/features/jdk-17-bump/mym2")
+        }
+    }
 }
 
 release {
